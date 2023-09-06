@@ -65,7 +65,7 @@ const defaultRules = [
         new Pattern(/\n/gm, `<br>`),
     ]),
     new Rule(`cleanup`, [
-        new Pattern(/<\/h6><br>/gm, `</h6>`),
+        new Pattern(/<hr><br>/gm, `<hr>`),
         new Pattern(/<\/h6><br>/gm, `</h6>`),
         new Pattern(/<\/h5><br>/gm, `</h5>`),
         new Pattern(/<\/h4><br>/gm, `</h4>`),
