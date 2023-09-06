@@ -36,7 +36,7 @@ const defaultRules = [
         new Pattern(/^\`{3}\r\n([\s\S]+)\`{3}(\r\n|)/gm, `<center><div class="codeblock"><code>$1</code></div></center>`),
     ]),
     new Rule(`line`, [
-        new Pattern(/(\-{3}\r\n|\-{3})/gm, `<hr>`),
+        new Pattern(/\-{3}(\r\n|\r|\n)/gm, `<hr>`),
     ]),
 
     new Rule(`image`, [
@@ -65,6 +65,7 @@ const defaultRules = [
         new Pattern(/\n/gm, `<br>`),
     ]),
     new Rule(`cleanup`, [
+        new Pattern(/<\/h6><br>/gm, `</h6>`),
         new Pattern(/<\/h6><br>/gm, `</h6>`),
         new Pattern(/<\/h5><br>/gm, `</h5>`),
         new Pattern(/<\/h4><br>/gm, `</h4>`),
