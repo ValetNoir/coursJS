@@ -3,7 +3,10 @@
 ## Bienvenue !
 Ce site web est dédié à mes cours, il est donc édité au fur et à mesure, tout au long de l'année.
 - valet -
+
 ---
+
+*06/09/2023*: Rework & upgrade du markdown
 
 *05/09/2023*: Déploiement sur github
 
