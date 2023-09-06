@@ -10,14 +10,6 @@
     border-color: black;
 }
 
-@media (prefers-color-scheme: dark) {
-    *:not(button) {
-        background: black;
-        color: white;
-        border-color: white;
-    }
-}
-
 html, body {
     height: calc(100% - 10px);
 }
@@ -74,4 +66,17 @@ button {
     height: fit-content;
     overflow: hidden;
     text-align: start;
+}
+
+@media (prefers-color-scheme: dark) {
+    *:not(button) {
+        background: black;
+        color: white;
+        border-color: white;
+    }
+}
+
+@media print {
+    #tabs { display: none; }
+    #content { overflow-y: visible; }
 }
