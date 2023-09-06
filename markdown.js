@@ -25,12 +25,12 @@ class Rule {
 
 const defaultRules = [
     new Rule(`header`, [
-        new Pattern(/^#{6}\s?([^\n]+)\r/gm, `<h6>$1</h6>`),
-        new Pattern(/^#{5}\s?([^\n]+)\r/gm, `<h5>$1</h5>`),
-        new Pattern(/^#{4}\s?([^\n]+)\r/gm, `<h4>$1</h4>`),
-        new Pattern(/^#{3}\s?([^\n]+)\r/gm, `<h3>$1</h3>`),
-        new Pattern(/^#{2}\s?([^\n]+)\r/gm, `<h2>$1</h2>`),
-        new Pattern(/^#{1}\s?([^\n]+)\r/gm, `<h1>$1</h1>`),
+        new Pattern(/^#{6}\s?([^\n]+)/gm, `<h6>$1</h6>`),
+        new Pattern(/^#{5}\s?([^\n]+)/gm, `<h5>$1</h5>`),
+        new Pattern(/^#{4}\s?([^\n]+)/gm, `<h4>$1</h4>`),
+        new Pattern(/^#{3}\s?([^\n]+)/gm, `<h3>$1</h3>`),
+        new Pattern(/^#{2}\s?([^\n]+)/gm, `<h2>$1</h2>`),
+        new Pattern(/^#{1}\s?([^\n]+)/gm, `<h1>$1</h1>`),
     ]),
     new Rule(`block`, [
         new Pattern(/^\`{3}\r\n([\s\S]+)\`{3}(\r\n|)/gm, `<center><div class="codeblock"><code>$1</code></div></center>`),
