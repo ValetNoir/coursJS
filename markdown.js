@@ -25,18 +25,18 @@ class Rule {
 
 const defaultRules = [
     new Rule(`header`, [
-        new Pattern(/^#{6}\s?([^\n]+)\r/gm, `<h6>$1</h6>`),
-        new Pattern(/^#{5}\s?([^\n]+)\r/gm, `<h5>$1</h5>`),
-        new Pattern(/^#{4}\s?([^\n]+)\r/gm, `<h4>$1</h4>`),
-        new Pattern(/^#{3}\s?([^\n]+)\r/gm, `<h3>$1</h3>`),
-        new Pattern(/^#{2}\s?([^\n]+)\r/gm, `<h2>$1</h2>`),
-        new Pattern(/^#{1}\s?([^\n]+)\r/gm, `<h1>$1</h1>`),
+        new Pattern(/^#{6}\s?([^\n]+)\r/g, `<h6>$1</h6>`),
+        new Pattern(/^#{5}\s?([^\n]+)\r/g, `<h5>$1</h5>`),
+        new Pattern(/^#{4}\s?([^\n]+)\r/g, `<h4>$1</h4>`),
+        new Pattern(/^#{3}\s?([^\n]+)\r/g, `<h3>$1</h3>`),
+        new Pattern(/^#{2}\s?([^\n]+)\r/g, `<h2>$1</h2>`),
+        new Pattern(/^#{1}\s?([^\n]+)\r/g, `<h1>$1</h1>`),
     ]),
     new Rule(`block`, [
-        new Pattern(/^\`{3}\r\n([\s\S]+)\`{3}(\r\n|)/gm, `<center><div class="codeblock"><code>$1</code></div></center>`),
+        new Pattern(/^\`{3}\r\n([\s\S]+)\`{3}(\r\n|)/g, `<center><div class="codeblock"><code>$1</code></div></center>`),
     ]),
     new Rule(`line`, [
-        new Pattern(/(\-\-\-\r\n|\-\-\-)/g, `<hr>`),
+        new Pattern(/(\-{3}\r\n|\-{3})/g, `<hr>`),
     ]),
 
     new Rule(`image`, [
@@ -65,12 +65,12 @@ const defaultRules = [
         new Pattern(/\n/g, `<br>`),
     ]),
     new Rule(`cleanup`, [
-        new Pattern(/<\/h6><br>/gm, `</h6>`),
-        new Pattern(/<\/h5><br>/gm, `</h5>`),
-        new Pattern(/<\/h4><br>/gm, `</h4>`),
-        new Pattern(/<\/h3><br>/gm, `</h3>`),
-        new Pattern(/<\/h2><br>/gm, `</h2>`),
-        new Pattern(/<\/h1><br>/gm, `</h1>`),
+        new Pattern(/<\/h6><br>/g, `</h6>`),
+        new Pattern(/<\/h5><br>/g, `</h5>`),
+        new Pattern(/<\/h4><br>/g, `</h4>`),
+        new Pattern(/<\/h3><br>/g, `</h3>`),
+        new Pattern(/<\/h2><br>/g, `</h2>`),
+        new Pattern(/<\/h1><br>/g, `</h1>`),
     ])
 ]
 

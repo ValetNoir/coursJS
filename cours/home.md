@@ -2,7 +2,9 @@
 ---
 ## Bienvenue !
 Ce site web est dédié à mes cours, il est donc édité au fur et à mesure, tout au long de l'année.
-- valet -
+
+*Entretenu et développé par*
+`valet_noir`
 
 ---
 
@@ -14,4 +16,4 @@ Ce site web est dédié à mes cours, il est donc édité au fur et à mesure, t
 
 *31/08/2023*: Création du document
 
-![Image](coursJS/assets/b9ef78d94789fe3b1fcccb6b15e0e236.png)
+![Image](assets/b9ef78d94789fe3b1fcccb6b15e0e236.png)
